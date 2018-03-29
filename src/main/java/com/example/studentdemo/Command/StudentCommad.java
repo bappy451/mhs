@@ -1,15 +1,13 @@
-package com.example.studentdemo.Models;
+package com.example.studentdemo.Command;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Entity
-public class Student {
-
-    @Id
+@NoArgsConstructor
+public class StudentCommad {
     private Long id;
     private String StudentName;
     private String Batch;
-    @Lob
     private Byte[] image;
 
     public Byte[] getImage() {

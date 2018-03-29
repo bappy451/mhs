@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<h1>Mohendrapur High School...</h1>
+
+<table>
+    <tr>
+        <th>Batch</th>
+        <th>ID</th>
+        <th>NAME</th>
+    </tr>
+    <tr th:each="s: ${s}">
+        <td th:text="${s.batch}"></td>
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.studentName}"></td>
+    </tr>
+    <div class="col-md-6">
+        <img th:src="@{'/Student/' + ${s.id} + '/image'}"
+             width="200" height="200">
+    </div>
+</table>
+
+</body>
+</html>

@@ -16,7 +16,7 @@ public class indexController {
         this.studentRepository = studentRepository;
     }
 
-    @RequestMapping({"","/","/mhs"})
+    @RequestMapping({"","/index","/mhs","/"})
     public String getStudent(Model model){
         model.addAttribute("s",studentRepository.findAll());
 

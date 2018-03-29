@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>School Life</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>Mohendrapur High School</h3>
+<form action="#" th:action="@{/Student/update}" th:object="${student}" method="post"enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{studentName}" /></td>
+        </tr>
+        <tr>
+            <td>Batch:</td>
+            <td><input type="text" th:field="*{batch}" /></td>
+        </tr>
+        <tr>
+            <td>ID:</td>
+            <td><input type="text" th:field="*{id}" /></td>
+        </tr>
+        <tr>
+            <label class="control-label">Select File</label>
+            <input id="imagefile" name="imagefile" type="file" class="file">
+            <td><button type="submit">Submit post</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
